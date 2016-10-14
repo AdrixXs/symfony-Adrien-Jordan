@@ -17,11 +17,13 @@
         </thead>
         <tbody>
         {% for annonce in annonces %}
+
+            {% set i = 0 %}
             <tr>
                 <td><a href="{{ path('annonce_show', { 'id': annonce.id }) }}">{{ annonce.id }}</a></td>
                 <td>{{ annonce.title }}</td>
                 <td>{{ annonce.prix }}</td>
-                <td>{{ annonce.vendeur }}</td>
+                <td>{{ annonce.nom}}</td>
                 <td>{{ annonce.telephone }}</td>
                 <td>{{ annonce.description }}</td>
                 <td>
@@ -35,6 +37,7 @@
                     </ul>
                 </td>
             </tr>
+            {% set i = i+1 %}
         {% endfor %}
         </tbody>
     </table>

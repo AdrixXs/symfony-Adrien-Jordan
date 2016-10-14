@@ -1,7 +1,3 @@
-annonce_vendeur:
-    resource: "@AnnonceBundle/Resources/config/routing/vendeur.yml"
-    prefix:   /vendeur
-
 annonce_annonce:
     resource: "@AnnonceBundle/Resources/config/routing/annonce.yml"
     prefix:   /annonce

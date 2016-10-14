@@ -15,10 +15,7 @@ AnnonceBundle\Entity\Annonce:
         prix:
             type: float
             length: 255
-        vendeur:
-            type: string
-            length: 255
-        telephone:
+        id_vendeur:
             type: integer
         description:
             type: text

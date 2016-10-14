@@ -1,12 +1,12 @@
 <?php
 
-namespace AnnonceBundle\Form;
+namespace User\UserBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class VendeurType extends AbstractType
+class UserType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -16,8 +16,10 @@ class VendeurType extends AbstractType
     {
         $builder
             ->add('nom')
+            ->add('prenom')
             ->add('telephone')
-            ->add('mail')
+            ->add('adresse')
+            ->add('departement')
         ;
     }
     
@@ -27,7 +29,12 @@ class VendeurType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AnnonceBundle\Entity\Vendeur'
+            'data_class' => 'User\UserBundle\Entity\User'
         ));
+    }
+
+    public function getParent()
+    {
+        return 'FOS\UserBundle\Form\Type\RegistrationFormType';
     }
 }

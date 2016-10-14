@@ -2,6 +2,7 @@
 
 namespace AnnonceBundle\Controller;
 
+use AnnonceBundle\Entity\Vendeur;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -22,7 +23,19 @@ class AnnonceController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $annonces = $em->getRepository('AnnonceBundle:Annonce')->findAll();
+        $allannonces = $em->getRepository('AnnonceBundle:Annonce')->findAll();
+
+        $i=0;
+        foreach($allannonces as $annonce)
+        {
+            $annonces[$i]["id"] = $annonce->getId();
+            $annonces[$i]["title"] = $annonce->getTitle();
+            $annonces[$i]["prix"] = $annonce->getPrix();
+            $annonces[$i]["nom"] = $em->getRepository('UserBundle:User')->find($annonce->getId_Vendeur())->getNom();
+            $annonces[$i]["telephone"] = $em->getRepository('UserBundle:User')->find($annonce->getId_Vendeur())->getTelephone();
+            $annonces[$i]["description"] = $annonce->getDescription();
+            $i++;
+        }
 
         return $this->render('annonce/index.html.twig', array(
             'annonces' => $annonces,

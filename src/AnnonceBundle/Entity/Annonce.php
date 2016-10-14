@@ -25,14 +25,9 @@ class Annonce
     private $prix;
 
     /**
-     * @var string
-     */
-    private $vendeur;
-
-    /**
      * @var int
      */
-    private $telephone;
+    private $id_vendeur;
 
     /**
      * @var string
@@ -84,9 +79,9 @@ class Annonce
      * @param string $vendeur
      * @return Annonce
      */
-    public function setVendeur($vendeur)
+    public function setId_Vendeur($id_vendeur)
     {
-        $this->vendeur = $vendeur;
+        $this->id_vendeur = $id_vendeur;
 
         return $this;
     }
@@ -94,34 +89,11 @@ class Annonce
     /**
      * Get vendeur
      *
-     * @return string 
+     * @return int
      */
-    public function getVendeur()
+    public function getId_Vendeur()
     {
-        return $this->vendeur;
-    }
-
-    /**
-     * Set telephone
-     *
-     * @param integer $telephone
-     * @return Annonce
-     */
-    public function setTelephone($telephone)
-    {
-        $this->telephone = $telephone;
-
-        return $this;
-    }
-
-    /**
-     * Get telephone
-     *
-     * @return integer 
-     */
-    public function getTelephone()
-    {
-        return $this->telephone;
+        return $this->id_vendeur;
     }
 
     /**

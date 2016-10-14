@@ -3,6 +3,8 @@
 namespace AnnonceBundle\Form;
 
 use Doctrine\DBAL\Types\FloatType;
+use Doctrine\DBAL\Types\StringType;
+use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
@@ -23,8 +25,6 @@ class AnnonceType extends AbstractType
             ->add('image', FileType::class, array(
                 'data_class' => null
             ))
-            ->add('vendeur')
-            ->add('telephone')
             ->add('description')
         ;
     }

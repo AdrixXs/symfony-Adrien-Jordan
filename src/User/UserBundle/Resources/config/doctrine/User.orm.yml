@@ -1,7 +1,7 @@
-AnnonceBundle\Entity\Vendeur:
+User\UserBundle\Entity\User:
     type: entity
     table: null
-    repositoryClass: AnnonceBundle\Repository\VendeurRepository
+    repositoryClass: User\UserBundle\Repository\UserRepository
     id:
         id:
             type: integer
@@ -12,12 +12,16 @@ AnnonceBundle\Entity\Vendeur:
         nom:
             type: string
             length: 255
-            column: Nom
-        telephone:
-            type: integer
-            column: Telephone
-        mail:
+        prenom:
             type: string
             length: 255
-            column: Mail
+        telephone:
+            type: string
+            length: 255
+        adresse:
+            type: string
+            length: 255
+        departement:
+            type: string
+            length: '3'
     lifecycleCallbacks: {  }
