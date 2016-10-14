@@ -1,0 +1,23 @@
+annonce_vendeur:
+    resource: "@AnnonceBundle/Resources/config/routing/vendeur.yml"
+    prefix:   /vendeur
+
+annonce_annonce:
+    resource: "@AnnonceBundle/Resources/config/routing/annonce.yml"
+    prefix:   /annonce
+
+annonce_homepage:
+    path:     /
+    defaults: { _controller: AnnonceBundle:Default:index }
+
+cgu:
+    path:     /cgu
+    defaults: { _controller: AnnonceBundle:Footer:cgu }
+
+faq:
+    path:     /faq
+    defaults: { _controller: AnnonceBundle:Footer:faq }
+
+mention_legal:
+    path:     /mentions_legales
+    defaults: { _controller: AnnonceBundle:Footer:ml }

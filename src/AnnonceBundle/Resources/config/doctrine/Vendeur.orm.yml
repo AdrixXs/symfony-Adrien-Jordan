@@ -1,0 +1,23 @@
+AnnonceBundle\Entity\Vendeur:
+    type: entity
+    table: null
+    repositoryClass: AnnonceBundle\Repository\VendeurRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            column: Nom
+        telephone:
+            type: integer
+            column: Telephone
+        mail:
+            type: string
+            length: 255
+            column: Mail
+    lifecycleCallbacks: {  }

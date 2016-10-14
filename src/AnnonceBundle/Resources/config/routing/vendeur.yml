@@ -1,0 +1,24 @@
+vendeur_index:
+    path:     /
+    defaults: { _controller: "AnnonceBundle:Vendeur:index" }
+    methods:  GET
+
+vendeur_show:
+    path:     /{id}/show
+    defaults: { _controller: "AnnonceBundle:Vendeur:show" }
+    methods:  GET
+
+vendeur_new:
+    path:     /new
+    defaults: { _controller: "AnnonceBundle:Vendeur:new" }
+    methods:  [GET, POST]
+
+vendeur_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AnnonceBundle:Vendeur:edit" }
+    methods:  [GET, POST]
+
+vendeur_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AnnonceBundle:Vendeur:delete" }
+    methods:  DELETE

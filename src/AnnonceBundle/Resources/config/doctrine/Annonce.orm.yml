@@ -1,0 +1,28 @@
+AnnonceBundle\Entity\Annonce:
+    type: entity
+    table: null
+    repositoryClass: AnnonceBundle\Repository\AnnonceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        prix:
+            type: float
+            length: 255
+        vendeur:
+            type: string
+            length: 255
+        telephone:
+            type: integer
+        description:
+            type: text
+        image:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
