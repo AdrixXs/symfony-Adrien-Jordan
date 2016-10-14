@@ -1,0 +1,27 @@
+User\UserBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: User\UserBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        telephone:
+            type: string
+            length: 255
+        adresse:
+            type: string
+            length: 255
+        departement:
+            type: string
+            length: '3'
+    lifecycleCallbacks: {  }
